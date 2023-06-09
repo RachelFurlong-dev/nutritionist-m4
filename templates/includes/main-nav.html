@@ -14,14 +14,13 @@
 
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="nuts-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Nuts
+                Nuts, Seeds &amp; Mixes
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="nuts-link">
-                <a href="" class="dropdown-item">Nuts &amp; Seeds</a>
-                <a href="" class="dropdown-item">Nuts</a>
-                <a href="" class="dropdown-item">Seeds</a>
-                <a href="" class="dropdown-item">Mixes</a>
-                <a href="" class="dropdown-item">All Nuts &amp; Seeds</a>
+                <a href="{% url 'products' %}?category=nuts" class="dropdown-item">Nuts</a>
+                <a href="{% url 'products' %}?category=seeds" class="dropdown-item">Seeds</a>
+                <a href="{% url 'products' %}?category=mixes" class="dropdown-item">Mixes</a>
+                <a href="{% url 'products' %}?category=nuts,seeds,mixes" class="dropdown-item">All Nuts, Seeds &amp; Mixes</a>
             </div>
         </li>
 
@@ -30,9 +29,9 @@
                 Dried Fruit
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="fruit-link">
-                <a href="" class="dropdown-item">Fruits &amp; Berries</a>
-                <a href="" class="dropdown-item">Coated Fruits</a>
-                <a href="" class="dropdown-item">All Dried Fruit</a>
+                <a href="{% url 'products' %}?category=fruits_berries" class="dropdown-item">Fruits &amp; Berries</a>
+                <a href="{% url 'products' %}?category=coated_fruits" class="dropdown-item">Coated Fruits</a>
+                <a href="{% url 'products' %}?category=fruits_berries,coated_fruits" class="dropdown-item">All Dried Fruit</a>
             </div>
         </li>
 
