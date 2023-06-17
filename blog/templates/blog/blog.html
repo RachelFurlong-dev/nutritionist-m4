@@ -14,39 +14,38 @@
     <div class="overlay"></div>
     <div class="container mb-2">
         <div class="row">
-            <div class="col">
-                <hr>
+            <div class="col-12 col-md-6 col-lg-4 offset-lg-2 ">
+                <br>
                 <h2 class="logo-font mb-4">Blog Page</h2>
-                <hr>
+                <br>
             </div>
         </div>
-        <div class="row">
-            <div class="col">
+        <div class="row ">
+            <div class="col-12 sm-6 bg-light py-4">
                 {% for post in posts %}
-                    {{ post.post_title }}
+                    <h2>{{ post.post_title }}</h2>
                     <br>
-                    {{ post.thumb.url }}
-                    <br>
-                    {{ post.publish_date }}
-                    <br>
-                    {{ post.author }}
-                    <br>
-                    {{ post.body }}
-                    <br>
-                {% endfor %}
-            </div>
-            <!--test-->
-            <div class="img-container my-3 mx-auto">
                 {% if post.thumb %}
                 <a href="{{ post.thumb.url }}">
-                    <img class="img-fluid rounded" src="{{ post.thumb.url }}" alt="{{ post.title }}">
+                    <img class="" src="{{ post.thumb.url }}" alt="{{ post.title }}">
                 </a>
                 {% else %}
                 <a href="">
                     <img class="img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ post.title }}">
                 </a>
                 {% endif %}
+                <div class="col-12 sm-6">
+                    <br>
+                    Date created:{{ post.publish_date }}
+                    <br>
+                    Author:{{ post.author }}
+                    <br>
+                    <hr>
+                    {{ post.body }}
+                    <br>
+                    <hr>
+                {% endfor %}
             </div>
-            <!--test-->
         </div>
+     
 {% endblock %}
