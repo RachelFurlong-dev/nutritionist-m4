@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-c_z-ujun@e(+q9v&*na3u&4p2xrq68100i(0c3k7x$_kqfp79x
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['nutritionist-rf.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['nutritionist-rf.herokuapp.com', 'localhost', 'https://nutritionist-rf-f7d23ec1a841.herokuapp.com']
 
 
 # Application definition
