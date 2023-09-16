@@ -9,4 +9,4 @@ def view_stockist_list(request):
     context = {
         'stockists': stockists
     }
-    return render(request, 'stockists/stockist_list.html', context )
+    return render(request, 'stockists/stockist_list.html', context)
