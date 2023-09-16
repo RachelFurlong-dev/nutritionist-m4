@@ -5,8 +5,9 @@ from .models import Stockist
 
 
 def view_stockist_list(request):
-    stockists = Stockist.object.all()
+    stockists = Stockist.objects.all()
+    template = 'stockists/stockist_list.html'
     context = {
         'stockists': stockists
     }
-    return render(request, 'stockists/stockist_list.html', context)
+    return render(request, template, context)
