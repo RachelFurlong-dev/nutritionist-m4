@@ -11,12 +11,12 @@
         {% for stockist in stockists %}
         <tr>
         {% if stockist.in_stock %}
-            <td>{stockist.business_type}</td>
+            <td>{{ stockist.business_type }}</td>
         {% else %}
-            <td><strike>{stockist.business_type}</strike></td>
+            <td><strike>{{ stockist.business_type }}</strike></td>
         {% endif %}
         </tr>
-        {{ empty }}
+        {% empty %}
         <tr><td>There are no stockists at present</td></tr>
         {% endfor %}
    </table>
