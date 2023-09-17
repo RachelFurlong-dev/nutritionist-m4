@@ -10,10 +10,10 @@
    <table>
         {% for stockist in stockists %}
         <tr>
-        {% if stockist.in_stock %}
-            <td>{{ stockist.business_type }}</td>
+        {% if stockist.has_stock %}
+            <td>{{ stockist.name }}</td>
         {% else %}
-            <td><strike>{{ stockist.business_type }}</strike></td>
+            <td><strike>{{ stockist.name }}</strike></td>
         {% endif %}
         </tr>
         {% empty %}
