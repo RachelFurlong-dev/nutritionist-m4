@@ -29,9 +29,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEVELOPMENT' in os.environ
+DEBUG = 'DEBUG' in os.environ
 
-ALLOWED_HOSTS = ['nutritionist-rf-f7d23ec1a841.herokuapp.com', 'nutritionist-rf.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = [os.environ.get('ALLOWED_HOST'), 'nutritionist-rf-f7d23ec1a841.herokuapp.com', 'nutritionist-rf.herokuapp.com', 'localhost']
 
 
 # Application definition
