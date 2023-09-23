@@ -14,9 +14,35 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col">
+            <!--blog heading-->
             <hr>
                 <h2 class="logo-font mb-4">Blog Page</h2>
+                <p>Read more about our products!</p>
             <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <!--blog list-->
+            {% for post in post_list %}
+            <div class = "card mb-4">
+                {% if post.thumb %}
+                <a href="{% url 'post_detail' post.slug %}">
+                <img class="card-img-top img-fluid" src= "{{ post.thumb.url }}" alt="{{ post_title }}">
+                </a>
+                {% else %}
+                <a href="{% url 'post_detail' post.slug %}">
+                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ post_title }}">
+                </a>
+                {% endif %}
+                <div class="card-body">
+                <h4 class="card-title">{{ post.post_title }}</h4>
+                <p class="card-text text-muted h6">{{ post.author }} | {{ post.publish_date}} </p>
+                <p class="card-text">{{post.body|slice:":200" }}</p>
+                <a href="{% url 'post_detail' post.slug  %}" class="btn btn-primary">Read more</a>
+                </div>
+            </div>
+            {% endfor %}
         </div>
     </div>
 </div>
