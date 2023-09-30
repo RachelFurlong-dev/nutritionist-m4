@@ -22,10 +22,10 @@
         </div>
     </div>
     <div class="row">
-        <div class="col">
+        <div class="col-12 md-6">
             <!--blog list-->
             {% for post in post_list %}
-            <div class = "card mb-4 px-3 mx-5">
+            <div class = "card my-4 px-3 mx-4">
                 {% if post.thumb %}
                 <a href="{% url 'post_detail' post.slug %}">
                 <img class="card-img-top img-fluid" src= "{{ post.thumb.url }}" alt="{{ post_title }}">
@@ -38,7 +38,7 @@
                 <div class="card-body">
                 <h4 class="card-title">{{ post.post_title }}</h4>
                 <p class="card-text text-muted h6">{{ post.author }} | {{ post.publish_date}} </p>
-                <p class="card-text">{{post.body|slice:":200" }}</p>
+                <p class="card-text">{{post.body|slice:":500" }}</p>
                 <a href="{% url 'post_detail' post.slug  %}" class="btn btn-primary">Read more</a>
                 </div>
             </div>
