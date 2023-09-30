@@ -22,10 +22,10 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-12 md-6">
+        <div class="col">
             <!--blog list-->
             {% for post in post_list %}
-            <div class = "card my-4 px-3 mx-4">
+            <div class = "card my-4 py-3 mx-4 px-3">
                 {% if post.thumb %}
                 <a href="{% url 'post_detail' post.slug %}">
                 <img class="card-img-top img-fluid" src= "{{ post.thumb.url }}" alt="{{ post_title }}">

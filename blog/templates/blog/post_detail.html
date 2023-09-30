@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <!--post content-->
+            <div class = "card my-4 py-3 mx-4 px-3">
+                {% if post.thumb %}
+                <a href="{% url 'post_detail' post.slug %}">
+                <img class="card-img-top img-fluid" src= "{{ post.thumb.url }}" alt="{{ post_title }}">
+                </a>
+                {% else %}
+                <a href="{% url 'post_detail' post.slug %}">
+                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ post_title }}">
+                </a>
+                {% endif %}
+                <div class="card-body">
+                    <h1>{% block title %} {{ object.title }} {% endblock title %}</h1>
+                    <p class=" text-muted">{{ post.author }} | {{ post.publish_date }}</p>
+                    <p class="card-text ">{{ object.content | safe }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% include 'includes/footer.html' %}
+{% endblock %}
