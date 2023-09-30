@@ -39,7 +39,7 @@
                 <h4 class="card-title">{{ post.post_title }}</h4>
                 <p class="card-text text-muted h6">{{ post.author }} | {{ post.publish_date}} </p>
                 <p class="card-text">{{post.body|slice:":500" }}</p>
-                <a href="{% url 'post_detail' post.slug  %}" class="btn btn-primary">Read more</a>
+                <a href="{% url 'post_detail' post.slug  %}" class="btn btn-black text-uppercase">Read more</a>
                 </div>
             </div>
             {% endfor %}

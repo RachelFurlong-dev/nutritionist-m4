@@ -16,6 +16,7 @@
         <div class="col">
             <!--post content-->
             <div class = "card my-4 py-3 mx-4 px-3">
+                <h1 class="card-title">{{ post.post_title }}</h1>
                 {% if post.thumb %}
                 <a href="{% url 'post_detail' post.slug %}">
                 <img class="card-img-top img-fluid" src= "{{ post.thumb.url }}" alt="{{ post_title }}">
@@ -26,9 +27,9 @@
                 </a>
                 {% endif %}
                 <div class="card-body">
-                    <h1>{% block title %} {{ object.title }} {% endblock title %}</h1>
+                    <p class="card-text">{{ post.body|linebreaks }}</p>
                     <p class=" text-muted">{{ post.author }} | {{ post.publish_date }}</p>
-                    <p class="card-text ">{{ object.content | safe }}</p>
+                    <a href="{% url 'post_list' %}" class="btn btn-black text-uppercase">Return to blog</a>
                 </div>
             </div>
         </div>
