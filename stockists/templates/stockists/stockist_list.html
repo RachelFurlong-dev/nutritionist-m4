@@ -1,24 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-   <h1>Our Stockists</h1> 
-   <table>
-        {% for stockist in stockists %}
-        <tr>
-        {% if stockist.has_stock %}
-            <td>{{ stockist.name }}</td>
-        {% else %}
-            <td><strike>{{ stockist.name }}</strike></td>
-        {% endif %}
-        </tr>
-        {% empty %}
-        <tr><td>There are no stockists at present</td></tr>
-        {% endfor %}
-   </table>
-</body>
-</html>
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col text-center mt-3 mx-5">
+            <!--page heading-->
+            <hr>
+                <h2 class="logo-font mb-4">Stockist List</h2>
+                <p>Our current stockists</p>
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <!--stockist card list-->
+            {% for stockist in stockists %}
+            <div class="card text-dark bg-light mb-2">
+                <div class="card-header font-weight-bold">{{ stockist.name }}:</div>
+                <div class="card-body">
+                {% if stockist.has_stock %}
+                <p class="card-text text-success">Currently has products in stock</p><i class="fa fa-check" style="color:green" aria-hidden="true"></i>
+                {% else %}
+                <p class="card-text text-danger">Out of stock</p>
+                {% endif %}
+            </div>
+            <br>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}
