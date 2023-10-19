@@ -43,6 +43,51 @@ This is the main marketing website for The Nutritionist raw organiic online food
 
     -   Contact Us Page Wireframe - [View](https://github.com/)
 
+## Database
+### Relational Database
+This project utilises PostgreSQL, a relational database mangement system (RDBMS) managed by ElephantSQL which offers PostgreSQL as a service. 
+
+### Models
+Django includes an Object-Relational Mapping (ORM) system for working with databases. In Django, a "model" refers to a Python class that defines the structure and behaviour of a database table. Models can establish relationships with other models, such as ForeignKey, OneToOneField, and ManyToManyField, to represent associations between tables in the database.
+
+As illustrated in the ERD, each model corresponds to a database table, and each field corresponds to a column in that table.
+
+### Entity Relationship Diagram (ERD)
+
+<img src="media/noimage.png">
+
+The following are the custom built models for this app:
+
+### Blog:
+The blog has functioinality to add a series of posts displayed on the main blog page, with a button to click through to read the whole content of the post.
+
+#### Post Model Database Table
+- id: BigAutoField
+- post_title : Charfield
+- slug: Slugfield
+- body : Textfield
+- publish_date: DateTimeField
+- thumb: ImageField
+- author: ForeignKey
+- status: IntegerField
+
+The Post Model also has a nested class Meta, which orders the posts in descending order according to the publish_date field. The __str__ method returns the title of the blog post as a string, so the title of each blog is listed in the admin area. 
+
+### Stockists:
+A simple model designed to store information added by the owner (superuser) of the ecommerce site, to list which retailers have the company's products in stock. 
+
+#### Stockists Model Database Table
+- id: BigAutoField
+- name : Charfield
+- has_stock: BooleanField
+
+### Reviews:
+id: BigAutoField
+username : Charfield
+email: EmailField
+UserProfile 
+
+
 ## Features
 
 -   Responsive on all device sizes
