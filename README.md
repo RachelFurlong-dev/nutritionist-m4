@@ -10,22 +10,27 @@ This is the main marketing website for The Nutritionist raw organiic online food
 
 -   ### User stories
 
-    -   #### First Time Visitor Goals
+    -   #### First Time Customer Goals
 
-        1. As a First Time Visitor, I want to easily understand the main products sold by the ecommerce company
-        2. As a First Time Visitor, I want to be able to easily navigate throughout the site to find products.
-        3. As a First Time Visitor, I want to look for reviewss to understand what their customers think of them and see if they are trusted and provide a good level of service. I also want to locate their social media links to see their followings on social media to determine how trusted and known they are.
+        1. As a First Time Customer, I want to easily understand the main products sold by the ecommerce company
+        2. As a First Time Customer, I want to be able to easily navigate throughout the site to find products.
+        3. As a First Time Customer, I want to look for reviewss to understand what their customers think of them and see if they are trusted and provide a good level of service. I also want to locate their social media links to see their followings on social media to determine how trusted and known they are.
 
-    -   #### Returning Visitor Goals
+    -   #### Returning Customer Goals
 
-        1. As a Returning Visitor, I want to explore and find new and inspiring dried fruit and nuts to buy.
-        2. As a Returning Visitor, I want to be able to buy products form the store and get them delivered.
-        3. As a Returning Visitor, I want to be able to find out more about the nutritional benefits of the products the store sells.
+        1. As a Returning Customer, I want to explore and find new and inspiring dried fruit and nuts to buy.
+        2. As a Returning Customer, I want to be able to buy products form the store and get them delivered.
+        3. As a Returning Customer, I want to be able to find out more about the nutritional benefits of the products the store sells.
 
-    -   #### Frequent User Goals
-        1. As a Frequent User, I want to be able to find products easily through search options.
-        2. As a Frequent User, I want to sign up and create my own account.
-        3. As a Frequent User, I want to sign up to the Newsletter so that I am emailed information about any new products.
+    -   #### Frequent Customer Goals
+        1. As a Frequent Customer, I want to be able to find products easily through search options.
+        2. As a Frequent Customer, I want to sign up and create my own account.
+        3. As a Frequent Customer, I want to sign up to the Newsletter so that I am emailed information about any new products.
+
+    -   #### Site Owner Goals
+        1. As a Site Owner, I want the website to be attractive to customers and entice them to buy products easily.
+        2. As a Site Owner, I want to establish a reular customer base who return and make regular purchases.
+        3. As a Site Owner, I want products to be stocked in high street shops and keep track of stock held by partners.
 
 -   ### Design
     -   #### Colour Scheme
@@ -54,12 +59,12 @@ As illustrated in the ERD, each model corresponds to a database table, and each 
 
 ### Entity Relationship Diagram (ERD)
 
-<img src="media/noimage.png">
+<img src="media/erd-nutritionist.png">
 
 The following are the custom built models for this app:
 
 ### Blog:
-The blog has functioinality to add a series of posts displayed on the main blog page, with a button to click through to read the whole content of the post.
+The blog has functionality to add a series of posts with title, text excerpt and an image displayed on the main blog page, with a button to click through to read the whole content of the post.
 
 #### Post Model Database Table
 - id: BigAutoField
@@ -74,7 +79,7 @@ The blog has functioinality to add a series of posts displayed on the main blog 
 The Post Model also has a nested class Meta, which orders the posts in descending order according to the publish_date field. The __str__ method returns the title of the blog post as a string, so the title of each blog is listed in the admin area. 
 
 ### Stockists:
-A simple model designed to store information added by the owner (superuser) of the ecommerce site, to list which retailers have the company's products in stock. 
+A simple model designed to store information added by the owner (superuser) of the ecommerce site, to lbe able to check which retailers have the company's products in stock. 
 
 #### Stockists Model Database Table
 - id: BigAutoField
@@ -121,6 +126,8 @@ UserProfile
     - Photoshop was used to resize images and editing photos for the website.
 1. [Adobe XD:](https://en.wikipedia.org/wiki/Adobe_XD)
     - Adobe XD was used to create the [wireframes](https://github.com/) during the design process.
+1. [Django](https://www.djangoproject.com/)
+    - Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design.
 1. [Amazon Web Services:](https://aws.amazon.com/s3/pricing/?nc=sn&loc=4)
     - Amazon Web Services was used to store the image files for the app.
 1. [Heroku:](https://id.heroku.com/login)
@@ -192,6 +199,22 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
         1. At the bottom of every page there is a footer where users can find a newsletter sign-up form.
         2. To the right hand side of the footer the user can see "Subscribe to our Newsletter" and are prompted to Enter their email address.
         3. There is a "Submit" button to the right hand side of the input field which is located close to the field and can easily be distinguished.
+
+-   #### Site Owner Goals
+
+    1. As a Site Owner, I want the website to be attractive to customers and entice them to buy products easily.
+        1. The home page displays a structured navigation with sotrting and filtering functionality, enabling shoppers to find products easily.
+        2. Product pages display an image and a clear desription of the product which can be easily added to a basket which is displayed in a modal to the top right of the page. 
+
+    2. As a Site Owner, I want to establish a reular customer base who return and make regular purchases.
+        1. Customers can create their own account through the sign-up page and save their details. They can also see a list of previous purchases within the account layout
+        2. The blog informs customers to recently added products and nutritional benefits of products.
+
+    3. As a Site Owner, I want products to be stocked in high street shops and keep track of stock held by partners.
+        1. The stockists app lists high street vendors who stock the Nutritionist's products.
+        <img src="media/stockists-list.png">
+        2. The shop owner/superuser can update the list manually in the admin area to indicate whether a partner has products or is out of stock. Future development would see this functionality to be developed to indicate what products are in stock and eventually into an automated inventory system.
+   
 
 ### Further Testing
 
