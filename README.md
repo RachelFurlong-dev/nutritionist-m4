@@ -247,51 +247,57 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 ## Deployment
 
-### GitHub Pages
+The project was deployed to Heroku and uses a relational PostgreSQl database via ElephantSQL using the following steps...
 
-The project was deployed to GitHub Pages using the following steps...
+### ElephantSQL
 
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
-2. At the top of the Repository (not top of page), locate the "Settings" Button on the menu.
-    - Alternatively Click [Here](https://raw.githubusercontent.com/) for a GIF demonstrating the process starting from Step 2.
-3. Scroll down the Settings page until you locate the "GitHub Pages" Section.
-4. Under "Source", click the dropdown called "None" and select "Master Branch".
-5. The page will automatically refresh.
-6. Scroll back down through the page to locate the now published site [link](https://github.com) in the "GitHub Pages" section.
+1. Go to [ElephantSQL.com](https://www.elephantsql.com/) and click *Get a managed database today*.
+2. Choose New, then from the dropdown, select *Create new app*
+3. Add preferred app name, select location, then click *create app* 
+4. Select Tiny Turtle via *Try now for FREE*
+5. Select *Log in with GitHub* and authorize ElephantSQL with your GitHub account.
+6. In the create new team form:
+7. Add a *team name*. 
+8. Agree to the *Terms of Service*.
+9. Select *Yes* for GDPR.
+10. Add email address.
+11. Click *Create Team*.
+12. Click *Create New Instance*.
 
-### Forking the GitHub Repository
+After logging into ElephantSQL...
+1. Set up your plan.
+2. Name the plan (genrally the name of the project).
+3. Select a region and data center (the one closest to your area).
+4. Click *Review*.
+5. Click *Create New Instance*.
+6. Return to the dashboard and click on the *database instance name*.
+7. Copy the database url.
 
-By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...
+### Heroku
 
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
-2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
-3. You should now have a copy of the original repository in your GitHub account.
+1. Go to [Heroku.com](https://www.heroku.com/).
+2. Choose *New*, then from the dropdown, select *Create new app*
+3. Add preferred app name, select location, then click *create app* 
+4. Go to the settings tab and add the DATABASE_URL config var.   
+5. Select *Reveal Config Vars*.
+6. Add config var DATABASE_URL and paste in the ElephantSQL database URL as the value.
+7. Add config var DATABASE_URL and paste in the ElephantSQL database URL as the value.
+8. Connect external database to GitPod as follows:
+9. In the **env.py** file add a new key, **DATABASE_URL** then give it the value of the database URL (see config vars Heroku).
+10. Install **dj-database-url** package version 0.5.0 and **psycopg2** in the terminal.
+11. Type *pip3 freeze --local > requirements.txt* to add the packages to the requirements.txt file.
+12. In settings.py file, comment out the default database setting and replace with the DATABASE_URL environment variable.
+13. Run *showmigrations* command in the terminal in order to confirm connection to the external database and view the list of migrations which should have been made, then run the *migrate* command.
+14. Create a superuser for the new database.
 
-### Making a Local Clone
+### Deploying to Heroku
 
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
-2. Under the repository name, click "Clone or download".
-3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
-4. Open Git Bash
-5. Change the current working directory to the location where you want the cloned directory to be made.
-6. Type `git clone`, and then paste the URL you copied in Step 3.
-
-```
-$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
-```
-
-7. Press Enter. Your local clone will be created.
-
-```
-$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
-> Cloning into `CI-Clone`...
-> remote: Counting objects: 10, done.
-> remote: Compressing objects: 100% (8/8), done.
-> remove: Total 10 (delta 1), reused 10 (delta 1)
-> Unpacking objects: 100% (10/10), done.
-```
-
-Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
+1. Install gunicorn which will act as our webserver and freeze that into the requirements.txt file
+2. Create a Procfile in the root directory to tell Heroku to create a web dyno which will run gunicorn and serve our Django app.
+3. Temporarily disable collectstatic by logging into the Heroku CLI in the terminal to tell Heroku not to collect static files when deploying:
+4. Add the hostname of our Heroku app to allowed hosts in settings.py.
+5. Commit changes and push to GitHub.
+6. Use the command *git push Heroku main* to deploy to Heroku.
 
 ## Credits
 [Tim Nelson](https://github.com/TravelTimN/ci-milestone05-fsfw/blob/main/README.md?plain=1) - icons for technologies used in Readme.md
