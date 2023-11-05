@@ -2,7 +2,7 @@
 
 [View the live project here.](https://nutritionist-rf-f7d23ec1a841.herokuapp.com/)
 
-This is the main marketing website for The Nutritionist raw organiic online food store. It is designed to be responsive and accessible on a range of devices, making it easy to navigate for potential customers and users.
+This is the main marketing website for The Nutritionist raw organic online food store. It is designed to be responsive and accessible on a range of devices, making it easy to navigate for potential customers and users.
 
 <h2 align="center"><img src="media/mockup_nutritionist.png"></h2>
 
@@ -34,7 +34,7 @@ This is the main marketing website for The Nutritionist raw organiic online food
 
 ## Design:
 
-#### Typography
+### Typography
  The Poppins font via [Google Fonts:](https://fonts.google.com/) is the main font used throughout the website with Sans Serif as the fallback font in case for any reason the font cannot be displayed in a browser correctly.
 
 ### Color Scheme:
@@ -90,7 +90,7 @@ The blog has functionality to add a series of posts with title, text excerpt and
 The Post Model also has a nested class Meta, which orders the posts in descending order according to the publish_date field. The __str__ method returns the title of the blog post as a string, so the title of each blog is listed in the admin area. 
 
 ### Stockists:
-A simple model designed to store information added by the owner (superuser) of the ecommerce site, to lbe able to check which retailers have the company's products in stock. 
+A model designed to store information added by the owner (superuser) of the ecommerce site, to lbe able to check which retailers have the company's products in stock. 
 
 #### Stockists Model Database Table
 - id: BigAutoField
@@ -98,17 +98,42 @@ A simple model designed to store information added by the owner (superuser) of t
 - has_stock: BooleanField
 
 ### Reviews:
-id: BigAutoField
-username : Charfield
-email: EmailField
-UserProfile 
-
+The Reviews model and templates are currently in development.
 
 ## Features
 
--   Responsive on all device sizes
+I have designed a series of features to meet requirements set out in user stories.
 
--   Interactive elements
+### Navigation
+- Use of categories in dropdown as well as selection by rating and price.
+- Search bar 
+- Account and Checkout icon links to relevant pages
+
+### Products Page
+- Responsive layout of products.
+
+### Individual Products Page
+Products Modal box
+
+### Product Management (superuser)
+
+### Checkout Page
+
+### Sign Up/ Login pages
+
+### Checkout functionality
+
+### Stripe payment option
+
+### Transactional Email
+
+### Blog
+
+### Stockist page
+
+### Responsive on all device sizes
+
+### Interactive elements
 
 ## Technologies Used
 
