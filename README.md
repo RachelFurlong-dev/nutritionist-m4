@@ -46,13 +46,18 @@ This is the main marketing website for The Nutritionist raw organiic online food
 | ![#00474C](https://via.placeholder.com/15/00474C/00474C) | ![#000000](https://via.placeholder.com/15/000000/000000) |
 | #00474C | #000000 |  
 
-*   ### Wireframes
+### Wireframes
+I have drawn a series of wireframes using Adobe XD to evidence responsive design planning of the site taking into account layouts for a range of device sizes (mobile, tablet and desktop views) When the mobile layout differers significantly from tablet, I have drawn an additional layout - for example the products page layout. You can see the wireframes for the product page below. For the complete set of wireframes - the files are stored [here](media/wireframes/).
 
-    -   Home Page Wireframe - [View](https://github.com/)
+### Wireframes - mobile first design
+#### Mobile layout (products)
+<img src="media/wireframes/product_page-mobile.png">
 
-    -   Mobile Wireframe - [View](https://github.com/)
+#### Tablet layout (products)
+<img src="media/wireframes/product_page-ipad.png">
 
-    -   Contact Us Page Wireframe - [View](https://github.com/)
+#### Desktop layout (products)
+<img src="media/wireframes/product_page-desktop.png">
 
 ## Database
 ### Relational Database
@@ -107,7 +112,7 @@ UserProfile
 
 ## Technologies Used
 
-### Frontend Technologies Used
+### Front-End Technologies Used
 
 - ![HTML5](https://img.shields.io/static/v1?label=HTML&message=5&color=E34F26&logo=html5&logoColor=ffffff)
     - [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5) - Used as the base for markup text.
@@ -118,39 +123,37 @@ UserProfile
 - ![Bootstrap 4.6](https://img.shields.io/static/v1?label=Bootstrap&message=4.6&color=ee6e73)
     - [Bootstrap 4.6](https://getbootstrap.com/docs/4.6/getting-started/introduction/) - Used as the front-end framework for layout and design.
 - ![Stripe API](https://img.shields.io/static/v1?label=Stripe&message=API&color=008CDD&logo=stripe&logoColor=ffffff)
-    - [Stripe API](https://stripe.com/docs/api?lang=python) - Used to make secured payments on *Feature Tickets*.
+    - [Stripe API](https://stripe.com/docs/api?lang=python) - Used to make secured payments on *The Nutritionist*.
 - ![Amazon AWS S3](https://img.shields.io/static/v1?label=Amazon%20AWS&message=S3&color=232F3E&logo=amazon%20aws)
     - [Amazon AWS S3](https://aws.amazon.com/) - Used to store *staticfiles* and *media* folders and files.
 
 
-### Libraries & Programs Used
+### Back-End Technologies Used
+
+- ![Python](https://img.shields.io/static/v1?label=Python&message=3.6.7&color=blue&logo=python&logoColor=ffffff)
+    - [Python 3.6.7](https://www.python.org/) - Used as the back-end programming language.
+- ![Django](https://img.shields.io/static/v1?label=Django&message=2.2.16&color=092E20&logo=django)
+    - [Django 2.2.16](https://docs.djangoproject.com/en/2.2/) - Used as my Python web framework.
+- ![Heroku](https://img.shields.io/static/v1?label=Heroku&message=PaaS&color=430098&logo=heroku)
+    - [Heroku](https://www.heroku.com) - Used for *"Platform as a Service"* (PaaS) for app hosting.
+- ![PostgreSQL 11.4](https://img.shields.io/static/v1?label=PostgreSQL&message=11.4&color=336791&logo=postgresql)
+    - [PostgreSQL 11.4](https://www.postgresql.org/) - Used as relational SQL database via [ElephantSQL](https://www.elephantsql.com/).
+
+### Additional Technologies Used
 
 1. [Google Fonts:](https://fonts.google.com/)
     - Google fonts were used to import the 'Poppins' font used on all pages throughout the project.
 1. [Font Awesome:](https://fontawesome.com/)
     - Font Awesome was used on all pages throughout the website to add icons for aesthetic and UX purposes.
-1. [jQuery:](https://jquery.com/)
-    - jQuery came with Bootstrap to make the navbar responsive but was also used for the smooth scroll function in JavaScript.
-1. [Git](https://git-scm.com/)
-    - Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
-1. [GitHub:](https://github.com/)
-    - GitHub is used to store the projects code after being pushed from Git.
 1. [Photoshop:](https://www.adobe.com/ie/products/photoshop.html)
     - Photoshop was used to resize images and editing photos for the website.
 1. [Adobe XD:](https://en.wikipedia.org/wiki/Adobe_XD)
-    - Adobe XD was used to create the [wireframes](https://github.com/) during the design process.
-1. [Django](https://www.djangoproject.com/)
-    - Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design.
-1. [Amazon Web Services:](https://aws.amazon.com/s3/pricing/?nc=sn&loc=4)
-    - Amazon Web Services was used to store the image files for the app.
-1. [Heroku:](https://id.heroku.com/login)
-    - Heroku was used to host the application files.process.
-1. [ElephantSQL](https://www.elephantsql.com/)
-    - ElephantSQL provided a PostgreSQL database structure for the application. 
-1. [Stripe](https://stripe.com/gb)
-    - Stripe provided payments functionality within the ecommerce store.    
+    - Adobe XD was used to create the [wireframes](media/wireframes/) during the design process. 
+1. [Git](https://git-scm.com/)
+    - Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
+1. [GitHub:](https://github.com/)
+    - GitHub was used to store the projects code after being pushed from Git.
 
-    
 
 ## Testing
 
