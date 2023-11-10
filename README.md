@@ -102,38 +102,67 @@ The Reviews model and templates are currently in development.
 
 ## Features
 
-I have designed a series of features to meet requirements set out in user stories.
+#### Main site features
+Clear navigation for user to select relevant page.
+A strapline promoting free delivery over an indicated amount.
+Bag modal with bag contents and total on product pages. 
+Allauth utilised for profile account features, allowing to  save address information and  order history.
+Responsive on all device sizes.
+A footer has been added to selected pages, with company social links to social media sites. The footer will be developed in the future to include additional navigation  links to internal pages.
 
-### Navigation
-- Use of categories in dropdown as well as selection by rating and price.
-- Search bar 
-- Account and Checkout icon links to relevant pages
+#### Home App
+The navigation allows users to select products, blog, checkout and profile pages. Navigation also has a Search bar and Menu dropdowns to sort products into price, category or by rating.
+Hero image and main strapline provides information about the brand and its purpose.
+Footer with social icons to the brand’s Pinterest and Instagram pages and copyright statement. The footer will be developed into a section containing links to all pages, terms and conditions and cookies statement.
 
-### Products Page
-- Responsive layout of products.
+#### Product App
+Item_list [CRUD]
+Select products of in a specific category (Nuts, seeds, mixes fruits & berries or coated fruit.
+Sort the products by price, rating or category and add products to the bag - view the total cost of item in the modal box.
+Products page layout shows the images of the various products, name, price, category and star rating.
+Product detail pages allow the user to find out more about the product, add a product to the bag and increase or decrease the number of products selected. Users can redirect to the shopping page to view additional products to buy. Additional JavaScript code ensures that the decrement button is disabled from going below one item.
+On adding the item to the bag, a user sees an automated popup with a Toast message providing feedback to the user confirming the action was successful and how many of that product were added to the bag. The user can also see a list of previous products if they have already been added to the bag, together with an image, description, total price, and a button to go to the checkout page for payment.
 
-### Individual Products Page
-Products Modal box
+#### Bag App
+The product summary page provides a list of products selected for purchase with options to increase or decrease the number of items in the bag, or to delete if required via a remove link.
+Users can view delivery costs at this point and are advised of how much more spend is required to reach the minimum spend for free delivery as well as delivery costs if the user does not want to increase spend. 
+User can proceed to complete purchase via a button stating ‘secure checkout’
 
-### Product Management (superuser)
+#### Checkout App
+- To complete the purchase, users complete the form with their delivery and payment details, and click the ‘complete order’ button to finalise. (The user, right to the final action still has the opportunity to adjust the bag contents. If users go ahead with the purchase they are informed for the total amount that will be charged to their card in advance.
+- Payments are made via the Stripe payment solution integrated with the app..
+A bag session is stored in the database with order details added to the order table 
+- Users can save their order details, so then the database is updated with their profile linked to their order. Users on subsequent logins can view their previous orders in order history on their profile page.
+- Users receive an email to their inbox to confirm their order and are provided with  the order number. 
 
-### Checkout Page
+#### Sign-up/Login
+- The sign-in page allows users to log into their account by filling a username and a password field correctly. If the user has forgotten their password there is a link to the reset password page as well as links to return to the Home page if required.
+- Annonymous users can sign up for an account by adding their email address and setting their passwords in the relevant fields. Toasts keep users informed if thier login has been successful. 
+- New customers receive an email to their inbox requesting them to click a link to verify their account to complete sign-up.
 
-### Sign Up/ Login pages
+#### Admin features:
+CRUD functionality
+Django @login_required decorator provides protection against anonymous users or users without superuser permissions accessing the data store. Superusers are permitted to Add, Edit and Delete products on the Product Management page on login. 
 
-### Checkout functionality
+#### Add Product
+There is a form on the product management allowing staff to complete the necessary fields. Category, Sku, Name, Description, Options, Price, rating and Image url. Some fields are optional as indicated by an asterisk next to their name. If no image is selected then a default image is used instead.
 
-### Stripe payment option
+#### Edit Product 
+Admin superusers can go to an existing product on the product page and use the edit link to provide access to the edit product functionality. There is a Toast feedback modal to alert supersuers to the fact they are editing a product. The details of a product can be amended as required and then updated or removed.
 
-### Transactional Email
+#### Delete Product
+Admin superusers can go to an existing product on the product page and use the delete link which on click removes a product immediately, with a feedback popup (Toast) to confirm deletion was successful.
 
-### Blog
+#### Blog App
+**Blog Archive page / Blog detail page:**
+Posts display an image, an excerpt and a button, and the posts are sorted in date order so the latest published blog is at the top. A button takes the user to the post detail page where all the text and an image are displayed. There is also a button to return the user to the blog archive page.
 
-### Stockist page
+#### Stockists App
+Admins are permitted to access the stockist list in the admin area so that offline stores who stock items supplied by The Nutritionist can be listed. An owner can maintain an up-to-date list of stockists so that users will be able to view which companies stock products. 
 
-### Responsive on all device sizes
-
-### Interactive elements
+#### Future Features
+- A reviews app is currently in development so that customers will be able to addd reviews to individual  products.
+- The stockists app could be developed so customers can see if a shop near their location stocks items. In addition, the app could link to an inventory to indicate individual items in stock/out of stock. In time the app would be more prominent on the front end as its use to customers develops.
 
 ## Technologies Used
 
