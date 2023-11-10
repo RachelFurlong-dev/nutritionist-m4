@@ -163,6 +163,7 @@ Admins are permitted to access the stockist list in the admin area so that offli
 #### Future Features
 - A reviews app is currently in development so that customers will be able to addd reviews to individual  products.
 - The stockists app could be developed so customers can see if a shop near their location stocks items. In addition, the app could link to an inventory to indicate individual items in stock/out of stock. In time the app would be more prominent on the front end as its use to customers develops.
+- Additional columns will be added to the footer section allowing for the addition of a footer nav bar including links to a Terms and Conditions and a Cookies page. Columns can be used for a newsletter sign-up and any industry award badges the store owner may want to display.
 
 ## Technologies Used
 
