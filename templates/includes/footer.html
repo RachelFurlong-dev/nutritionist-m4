@@ -1,15 +1,69 @@
 <footer class="bg-footer py-5">
-    <div class="d-flex flex-row justify-content-center">
-      <a target="_blank" href="https://www.pinterest.co.uk/">
-        <i class="fa fa-pinterest fa-2x p-3 text-light" aria-hidden="true"></i>
-        <span class="sr-only">Pinterest</span>
-    </a>
-      <a target="_blank" href="https://www.instagram.com/">
-        <i class="fa fa-instagram fa-2x p-3 text-light" aria-hidden="true"></i>
-        <span class="sr-only">Instagram</span>
-    </a>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <!--About Us-->
+          <p class="text-white">ABOUT US</p>
+          <p class="text-white">
+              Welcome to The Nutritionist, your premier destination for all things raw and wholesome! 
+              At our online store, we curate a vibrant selection of nutrient-rich, raw food products 
+              to nourish your body and support a healthy lifestyle. 
+          </p>
+        </div>
+        <!--Subscribe--> 
+        <div class="col">
+          <p class="text-white">NEWSLETTER</p>
+          <div class="card">
+            <div class="card-body">
+              <p>Subscribe to our newsletter etc...</p>
+              <form method="POST" action="" id="">
+                <button class="btn btn-dark text-uppercase" type="submit">
+                  Subscribe 
+                  <span class="icon">
+                      <i class="fas fa-arrow-right"></i>
+                  </span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+         <!--Social--> 
+        <div class="col">
+          <p class="text-white">FOLLOW US</p>
+            <a target="_blank" href="https://www.pinterest.co.uk/">
+            <i class="fa fa-facebook fa-2x p-3 text-light" aria-hidden="true"></i>
+            <span class="sr-only">Facebook</span>
+            </a>
+            <a target="_blank" href="https://www.pinterest.co.uk/">
+              <i class="fa fa-pinterest fa-2x p-3 text-light" aria-hidden="true"></i>
+              <span class="sr-only">Pinterest</span>
+              </a>
+            <a target="_blank" href="https://www.instagram.com/">
+            <i class="fa fa-instagram fa-2x p-3 text-light" aria-hidden="true"></i>
+            <span class="sr-only">Instagram</span>
+          </a>
+         </div>
+        <div class="col">
+          <!--Links-->
+          <p class="text-white">LINKS</p>
+          <a href="">
+            <p class="text-white ">Terms and Conditions</p>
+        </a>
+          <a href="">
+            <p class="text-white ">Privacy Policy</p>
+        </a>
+        </div> 
+      </div>
     </div>
+    <!--Copyright--> 
     <div class="d-flex flex-row justify-content-center">
-      <small class="text-light">&copy; Copyright The Nutritionist 2023</small>
+      <p class="text-white">© The Nutritionist <span id="current-year"></span></p>
     </div>
  </footer>
+ {% block postloadjs %}
+<script>
+    // Update copyright to current year 
+    const currentYear = document.querySelector("#current-year");
+    currentYear.innerText = new Date().getFullYear();
+</script>
+{% endblock %}
