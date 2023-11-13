@@ -8,12 +8,9 @@ def subscribe(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'You have successfully subscribed!')
-            return redirect('subscribe_success')
-        else:
-            messages.error(request, 'Invalid email address. Please try again.')
+            # Optionally, you can clear the form after successful submission
+            form = SubscribeForm()
     else:
         form = SubscribeForm()
-    return render(request, 'newsletter/subscribe.html', {'form': form})
 
-def subscribe_success(request):
-    return render(request, 'newsletter/subscribe_success.html')
+    return render(request, 'subscribe/subscribe_form.html', {'form': form})

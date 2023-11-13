@@ -17,6 +17,8 @@
             <div class="card-body">
               <p>Subscribe to our newsletter etc...</p>
               <form method="POST" action="" id="">
+                  {% csrf_token %}
+                  { form.as_p }
                 <button class="btn btn-dark text-uppercase" type="submit">
                   Subscribe 
                   <span class="icon">
