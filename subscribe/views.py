@@ -13,7 +13,7 @@ def subscribe(request):
     else:
         subscribe_form = SubscribeForm()
 
-    template = 'includes/footer.html'
+    template = 'templates/includes/footer.html'
     context = {
         'subscribe_form': subscribe_form,
     }
