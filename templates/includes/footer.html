@@ -16,9 +16,9 @@
           <div class="card">
             <div class="card-body">
               <p>Subscribe to our newsletter etc...</p>
-              <form method="POST" action="" id="">
+              <form method="POST" action="{% url 'subscribe' %}" id="">
                   {% csrf_token %}
-                  { form.as_p }
+                  {{ subscribe_form|crispy }}
                 <button class="btn btn-dark text-uppercase" type="submit">
                   Subscribe 
                   <span class="icon">
