@@ -4,13 +4,19 @@ from .forms import SubscribeForm
 
 def subscribe(request):
     if request.method == 'POST':
-        form = SubscribeForm(request.POST)
-        if form.is_valid():
-            form.save()
+        subscribe_form = SubscribeForm(request.POST)
+        if subscribe_form.is_valid():
+            subscribe = subscribe_form.save()
             messages.success(request, 'You have successfully subscribed!')
             # Optionally, you can clear the form after successful submission
-            form = SubscribeForm()
+            subscribe_form = SubscribeForm()
     else:
-        form = SubscribeForm()
+        subscribe_form = SubscribeForm()
 
-    return render(request, 'subscribe/subscribe_form.html', {'form': form})
+    template = 'templates/includes/footer.html'
+    
+    context = {
+        'subscribe_form': subscribe_form,
+    }
+
+    return render(request, 'templates/includes/footer.html', {'form': form})
