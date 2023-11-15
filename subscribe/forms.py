@@ -25,5 +25,5 @@ def __init__(self, *args, **kwargs):
             else:
                 placeholder = placeholders[field]
             self.fields[field].widget.attrs['placeholder'] = placeholder
-            self.fields[field].widget.attrs['class'] = 'border-black'
+            self.fields[field].widget.attrs['class'] = 'border-black rounded-0'
             self.fields[field].label = False

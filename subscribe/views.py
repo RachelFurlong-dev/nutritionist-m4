@@ -13,10 +13,9 @@ def subscribe(request):
     else:
         subscribe_form = SubscribeForm()
 
-    template = 'templates/includes/footer.html'
-    
+    template = 'includes/footer.html'
     context = {
         'subscribe_form': subscribe_form,
     }
 
-    return render(request, 'templates/includes/footer.html', {'form': form})
+    return render(request, template, context)
