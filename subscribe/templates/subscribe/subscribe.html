@@ -13,15 +13,18 @@
 <div class="overlay"></div>
 <div class="container">
     <div class="div">
-        <h2 class = display-4>Sign up to our newsletter</h2>
+        <h2 class="display-4 d-flex justify-content-center mt-4">Sign up to our newsletter</h2>
     </div>
-    <div class="row">
+    <div class="row d-flex justify-content-center mt-4">
         <!--Subscribe--> 
         <div class="col">
+          <p>Join our community of health enthusiasts and let us help you to make informed choices for a balanced and energised life. 
+            By signing up, you'll gain exclusive access to personalised tips from certified nutritionists, the latest updates on our health products, and special offers tailored just for you. </p>
+            
             <p class="text-white">NEWSLETTER</p>
             <div class="card">
               <div class="card-body">
-                <p>Subscribe to our newsletter etc...</p>
+                <p>Subscribe now and embark on a journey towards a happier, healthier you with Nutritionist!</p>
                 <form method="POST" action="{% url 'subscribe' %}" id="">
                     {% csrf_token %}
                     {{ subscribe_form|crispy }}
