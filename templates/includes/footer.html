@@ -10,25 +10,15 @@
               to nourish your body and support a healthy lifestyle. 
           </p>
         </div>
-        <!--Subscribe--> 
+        <!--Stockists--> 
         <div class="col">
-          <p class="text-white">NEWSLETTER</p>
-          <div class="card">
-            <div class="card-body">
-              <p>Subscribe to our newsletter etc...</p>
-              <form method="POST" action="{% url 'subscribe' %}" id="">
-                  {% csrf_token %}
-                  {{ subscribe_form|crispy }}
-                <button class="btn btn-dark text-uppercase" type="submit">
-                  Subscribe 
-                  <span class="icon">
-                      <i class="fas fa-arrow-right"></i>
-                  </span>
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
+          <p class="text-white">STOCKISTS</p>
+          <p class="text-white">Where to find our products.</p> 
+          <p class="text-white ">Healthy Health Foods</p>
+          <p class="text-white ">The Nut & Seed Co.</p>
+          <p class="text-white ">New Health Foods</p>
+          <a href="{% url 'stockists' %}" class="btn btn-light" role="button">View stockists</a>
+        </div> 
          <!--Social--> 
         <div class="col">
           <p class="text-white">FOLLOW US</p>
