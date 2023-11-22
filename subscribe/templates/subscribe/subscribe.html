@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container">
+    <div class="div">
+        <h2 class = display-2>Sign up to our newsletter</h2>
+    </div>
+    <div class="row">
+        <!--Subscribe--> 
+        <div class="col">
+            <p class="text-white">NEWSLETTER</p>
+            <div class="card">
+              <div class="card-body">
+                <p>Subscribe to our newsletter etc...</p>
+                <form method="POST" action="{% url 'subscribe' %}" id="">
+                    {% csrf_token %}
+                    {{ subscribe_form|crispy }}
+                  <button class="btn btn-dark text-uppercase" type="submit">
+                    Subscribe 
+                    <span class="icon">
+                        <i class="fas fa-arrow-right"></i>
+                    </span>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+    </div>
+</div>
+{% endblock %}
+
