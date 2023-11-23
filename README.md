@@ -6,6 +6,37 @@ This is the main marketing website for The Nutritionist raw organic online food 
 
 <h2 align="center"><img src="media/mockup_nutritionist.png"></h2>
 
+
+## TABLE OF CONTENTS
+
+* [User Experience](#user-experience)
+    * [User Stories](#user-stories)
+* [Design](#design)    
+    * [Typography](#typography)
+    * [Colour Scheme](#colour-scheme)
+    * [Wireframes](#wireframes)
+* [Database Design](#database-design)
+    * [Relational Database](#relational-database)
+    * [Entity Relationship Diagram](#entity-relationship-diagram)
+* [Models](#models)
+    * [Custom Models](#custom-models)
+* [Features](#features)
+* [Technologies Used](#technologies-used)
+    * [Front End Technologies](#front-end-technologies)
+    * [Back End Technologies](#back-end-technologies)
+    * [Additional Technologies](#additional-technologies)
+* [Deployment](#deployment)
+    * [ElephantSQL](#elephantsql)
+    * [Heroku](#heroku)
+    * [Deploying to Heroku](#deploying-to-heroku)  
+    * [Stripe](#stripe) 
+    * [Amazon Web Services](#amazon-web-services)  
+* [Credits](#credits)
+    * [Code](#code) 
+    * [Content](#content)
+    * [Media](#media) 
+    * [Acknowledgements](#acknowledgements)     
+
 ## User Experience (UX)
 
 -   ### User stories
@@ -63,18 +94,18 @@ I have drawn a series of wireframes using Adobe XD to evidence responsive design
 ### Relational Database
 This project utilises PostgreSQL, a relational database mangement system (RDBMS) managed by ElephantSQL which offers PostgreSQL as a service. 
 
-### Models
-Django includes an Object-Relational Mapping (ORM) system for working with databases. In Django, a "model" refers to a Python class that defines the structure and behaviour of a database table. Models can establish relationships with other models, such as ForeignKey, OneToOneField, and ManyToManyField, to represent associations between tables in the database.
-
+### Entity Relationship Diagram
 As illustrated in the ERD, each model corresponds to a database table, and each field corresponds to a column in that table.
 
-### Entity Relationship Diagram (ERD)
+<img src="media/m4_erd.jpeg">
 
-<img src="media/erd-nutritionist.png">
+## Models
+Django includes an Object-Relational Mapping (ORM) system for working with databases. In Django, a "model" refers to a Python class that defines the structure and behaviour of a database table. Models can establish relationships with other models, such as ForeignKey, OneToOneField, and ManyToManyField, to represent associations between tables in the database.
 
+### Custom Models
 The following are the custom built models for this app:
 
-### Blog:
+#### Blog:
 The blog has functionality to add a series of posts with title, text excerpt and an image displayed on the main blog page, with a button to click through to read the whole content of the post.
 
 #### Post Model Database Table
@@ -96,6 +127,12 @@ A model designed to store information added by the owner (superuser) of the ecom
 - id: BigAutoField
 - name : Charfield
 - has_stock: BooleanField
+
+#### Subscribe Model Database Table
+- id: BigAutoField
+- name : Charfield
+- email: EmailField
+- date_subscribed: DateTimeField
 
 ### Reviews:
 The Reviews model and templates are currently in development.
@@ -158,16 +195,20 @@ Admin superusers can go to an existing product on the product page and use the d
 Posts display an image, an excerpt and a button, and the posts are sorted in date order so the latest published blog is at the top. A button takes the user to the post detail page where all the text and an image are displayed. There is also a button to return the user to the blog archive page.
 
 #### Stockists App
-Admins are permitted to access the stockist list in the admin area so that offline stores who stock items supplied by The Nutritionist can be listed. An owner can maintain an up-to-date list of stockists so that users will be able to view which companies stock products. 
+Admins are permitted to edit the stockist list in the admin area so that offline stores who stock items supplied by The Nutritionist can be listed. An owner can maintain an up-to-date list of stockists so that users will be able to view which companies stock products.Users can view instock items at online stores via the link in the footer.  
+
+#### Subscribe App
+Unregistered and registered users can sign up to be added to The Nutritionist mailing list. The user signs up and sees a success message if the sign up is successful. The records are saved in the admin area with name, date and date subscribed listed.There are messages that warn the user if the email is invalid or a field is missing.
 
 #### Future Features
 - A reviews app is currently in development so that customers will be able to addd reviews to individual  products.
 - The stockists app could be developed so customers can see if a shop near their location stocks items. In addition, the app could link to an inventory to indicate individual items in stock/out of stock. In time the app would be more prominent on the front end as its use to customers develops.
 - Additional columns will be added to the footer section allowing for the addition of a footer nav bar including links to a Terms and Conditions and a Cookies page. Columns can be used for a newsletter sign-up and any industry award badges the store owner may want to display.
+- Additional content on the home page with featured or new products promoted beneath the hero section.
 
 ## Technologies Used
 
-### Front-End Technologies Used
+### Front-End Technologies
 
 - ![HTML5](https://img.shields.io/static/v1?label=HTML&message=5&color=E34F26&logo=html5&logoColor=ffffff)
     - [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5) - Used as the base for markup text.
@@ -183,7 +224,7 @@ Admins are permitted to access the stockist list in the admin area so that offli
     - [Amazon AWS S3](https://aws.amazon.com/) - Used to store *staticfiles* and *media* folders and files.
 
 
-### Back-End Technologies Used
+### Back-End Technologies
 
 - ![Python](https://img.shields.io/static/v1?label=Python&message=3.6.7&color=blue&logo=python&logoColor=ffffff)
     - [Python 3.6.7](https://www.python.org/) - Used as the back-end programming language.
@@ -194,7 +235,7 @@ Admins are permitted to access the stockist list in the admin area so that offli
 - ![PostgreSQL 11.4](https://img.shields.io/static/v1?label=PostgreSQL&message=11.4&color=336791&logo=postgresql)
     - [PostgreSQL 11.4](https://www.postgresql.org/) - Used as relational SQL database via [ElephantSQL](https://www.elephantsql.com/).
 
-### Additional Technologies Used
+### Additional Technologies
 
 1. [Google Fonts:](https://fonts.google.com/)
     - Google fonts were used to import the 'Poppins' font used on all pages throughout the project.
@@ -208,97 +249,6 @@ Admins are permitted to access the stockist list in the admin area so that offli
     - Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
 1. [GitHub:](https://github.com/)
     - GitHub was used to store the projects code after being pushed from Git.
-
-
-## Testing
-
-The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
-
--   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://github.com/)
--   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://github.com/)
-
-### Testing User Stories from User Experience (UX) Section
-
--   #### First Time Visitor Goals
-
-    1. As a First Time Visitor, I want to easily understand the main products sold by the ecommerce company
-
-        1. Upon entering the site, users are automatically greeted with a clean and easily readable navigation bar to go to the page of their choice. Underneath there is a Hero Image with Text and a "Shop Now" Call to action button.
-        2. The main visual impression of the brand is evident immediately with the hero image.
-
-    2. As a First Time Visitor, I want to be able to easily navigate throughout the site to find products.
-
-        1. At the top of each page there is a clean navigation bar, each link has a dropdown menu which describes what category they will end up at clearly, alternatively the left hand dropdown menu offers a selection of sort methods.
-        2. Users can click on a product of interest to find out more about the product and add their chosen quantity to their basket.
-        <img src="media/individual_product_page.png">
-        3. There is a Keep Shopping call to action button at the bottom of each product page to return the customer to the main product page.
-
-    3. As a First Time Visitor, I want to look for reviews to understand what their customers think of them and see if they are trusted and provide a good level of service. I also want to locate their social media links to see their followings on social media to determine how trusted and known they are.
-        1. Once the new visitor has visited individual products, the user will be able to see reviews indicating what previous buyers thought about the product.
-        2. The user can also scroll to the bottom of most pages on the site to locate social media links in the footer.
-
--   #### Returning Visitor Goals
-
-    1. As a Returning Visitor, I want to explore and find new and inspiring dried fruit and nuts to buy.
-
-        1. These are clearly shown in the product layouts and individual product pages.
-        2. Shoppers will be able to find out about new products when they are anounced in the blog.
-
-    2. As a Returning Visitor, I want to be able to buy products form the store and get them delivered.
-
-        1. The individual product pages allow users to add products to their bag.
-        2. A toast message will appear to inform the user they have successfully added the product quantity to the bag.
-        <img src="media/toast_msg1.png">
-        3. Users can see products listed on the shopping bag page with a total cost information on delivery threshold and a button to click through to the checkout page to purchase.
-        4. Users can create an account and buy products for delivery using card payment methods.
-        5. The user receives a toast message to confirm if the purchase was successful and the user will receive a confirmation emai to their email address.
-
-    3. As a Returning Visitor, I want to be able to find out more about the nutritional benefits of the products the store sells.
-        1. The Blog Page has a tab on the main navigtion and will open the main blog archive with a list of posts to read. Each post links through to the complete article on a new page.
-
--   #### Frequent User Goals
-
-    1. As a Frequent User, I want to be able to find products easily through search options.
-
-        1. The user can explore the sort methods in the drop down menu on the main navigation and sort products by price rating or category. Each sort optioin has further options such as ordering products from low - high price or alphabetically for example.
-        <img src="media/category_selection.png">
-    2. As a Frequent User, I want to sign up and create my own account.
-
-        1. Users can set up an account at any time. This would be more relevant to users who buy often and like the speed and convenience of ordering whilst logged into their account. They can also keep a record of past users and their delivery details are autosaved.
-
-    3. As a Frequent User, I want to sign up to the Newsletter so that I am emailed information about any new products.
-        1. At the bottom of every page there is a footer where users can find a newsletter sign-up form.
-        2. To the right hand side of the footer the user can see "Subscribe to our Newsletter" and are prompted to Enter their email address.
-        3. There is a "Submit" button to the right hand side of the input field which is located close to the field and can easily be distinguished.
-
--   #### Site Owner Goals
-
-    1. As a Site Owner, I want the website to be attractive to customers and entice them to buy products easily.
-        1. The home page displays a structured navigation with sotrting and filtering functionality, enabling shoppers to find products easily.
-        2. Product pages display an image and a clear desription of the product which can be easily added to a basket which is displayed in a modal to the top right of the page. 
-
-    2. As a Site Owner, I want to establish a reular customer base who return and make regular purchases.
-        1. Customers can create their own account through the sign-up page and save their details. They can also see a list of previous purchases within the account layout
-        2. The blog informs customers to recently added products and nutritional benefits of products.
-
-    3. As a Site Owner, I want products to be stocked in high street shops and keep track of stock held by partners.
-        1. The stockists app lists high street vendors who stock the Nutritionist's products.
-        <img src="media/stockists-list.png">
-        2. The shop owner/superuser can update the list manually in the admin area to indicate whether a partner has products or is out of stock. Future development would see this functionality to be developed to indicate what products are in stock and eventually into an automated inventory system.
-   
-
-### Further Testing
-
--   The Website was tested on Google Chrome, Internet Explorer, Microsoft Edge and Safari browsers.
--   The website was viewed on a variety of devices such as Desktop, Laptop, iPhone7, iPhone 8 & iPhoneX.
--   A large amount of testing was done to ensure that all pages were linking correctly.
--   Friends and family members were asked to review the site and documentation to point out any bugs and/or user experience issues.
-
-### Known Bugs
-
--   On some mobile devices the Hero Image pushes the size of screen out more than any of the other content on the page.
-    -   A white gap can be seen to the right of the footer and navigation bar as a result.
--   On Microsoft Edge and Internet Explorer Browsers, all links in Navbar are pushed upwards when hovering over them.
 
 ## Deployment
 
@@ -354,29 +304,30 @@ After logging into ElephantSQL...
 5. Commit changes and push to GitHub.
 6. Use the command *git push Heroku main* to deploy to Heroku.
 
+### Stripe
+
+### Amazon Web Services
+
 ## Credits
 [Tim Nelson](https://github.com/TravelTimN/ci-milestone05-fsfw/blob/main/README.md?plain=1) - icons for technologies used in Readme.md
 
 ### Code
 
--   The full-screen hero image code came from this [StackOverflow post](https://stackoverflow.com)
-
 -   [Bootstrap4](https://getbootstrap.com/docs/4.4/getting-started/introduction/): Bootstrap Library used throughout the project mainly to make site responsive using the Bootstrap Grid System.
+- Tutorial by [DjangoCentral](https://djangocentral.com/building-a-blog-application-with-django/) for help with blog development.
 
--   [MDN Web Docs](https://developer.mozilla.org/) : For Pattern Validation code. Code was modified to better fit my needs and to match an Irish phone number layout to ensure correct validation. Tutorial Found [Here](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/tel#Pattern_validation)
+- Tutorial by [Python Lessons](https://www.youtube.com/watch?v=wl4Yxo5_Cgw) for help with newsletter sign up development.
 
 ### Content
 
 -   All content was written by the developer.
 
--   Psychological properties of colours text in the README.md was found [here](http://www.colour-affects.co.uk/psychological-properties-of-colours)
-
 ### Media
 
--   All Images were created by the developer.
+-   All product images were created by the developer
 
 ### Acknowledgements
 
--   My Mentor for continuous helpful feedback.
+-   My Mentor Tim Nelson for continuous helpful feedback.
 
--   Tutor support at Code Institute for their support.
+-   Martin at Code Institute Tutor Support for help with coding errors..
