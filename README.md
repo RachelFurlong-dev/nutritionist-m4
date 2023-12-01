@@ -25,12 +25,6 @@ This is the main marketing website for The Nutritionist raw organic online food 
     * [Front End Technologies](#front-end-technologies)
     * [Back End Technologies](#back-end-technologies)
     * [Additional Technologies](#additional-technologies)
-* [Deployment](#deployment)
-    * [ElephantSQL](#elephantsql)
-    * [Heroku](#heroku)
-    * [Deploying to Heroku](#deploying-to-heroku)  
-    * [Stripe](#stripe) 
-    * [Amazon Web Services](#amazon-web-services)  
 * [Credits](#credits)
     * [Code](#code) 
     * [Content](#content)
@@ -250,63 +244,6 @@ Unregistered and registered users can sign up to be added to The Nutritionist ma
 1. [GitHub:](https://github.com/)
     - GitHub was used to store the projects code after being pushed from Git.
 
-## Deployment
-
-The project was deployed to Heroku and uses a relational PostgreSQl database via ElephantSQL using the following steps...
-
-### ElephantSQL
-
-1. Go to [ElephantSQL.com](https://www.elephantsql.com/) and click *Get a managed database today*.
-2. Choose New, then from the dropdown, select *Create new app*
-3. Add preferred app name, select location, then click *create app* 
-4. Select Tiny Turtle via *Try now for FREE*
-5. Select *Log in with GitHub* and authorize ElephantSQL with your GitHub account.
-6. In the create new team form:
-7. Add a *team name*. 
-8. Agree to the *Terms of Service*.
-9. Select *Yes* for GDPR.
-10. Add email address.
-11. Click *Create Team*.
-12. Click *Create New Instance*.
-
-After logging into ElephantSQL...
-1. Set up your plan.
-2. Name the plan (genrally the name of the project).
-3. Select a region and data center (the one closest to your area).
-4. Click *Review*.
-5. Click *Create New Instance*.
-6. Return to the dashboard and click on the *database instance name*.
-7. Copy the database url.
-
-### Heroku
-
-1. Go to [Heroku.com](https://www.heroku.com/).
-2. Choose *New*, then from the dropdown, select *Create new app*
-3. Add preferred app name, select location, then click *create app* 
-4. Go to the settings tab and add the DATABASE_URL config var.   
-5. Select *Reveal Config Vars*.
-6. Add config var DATABASE_URL and paste in the ElephantSQL database URL as the value.
-7. Add config var DATABASE_URL and paste in the ElephantSQL database URL as the value.
-8. Connect external database to GitPod as follows:
-9. In the **env.py** file add a new key, **DATABASE_URL** then give it the value of the database URL (see config vars Heroku).
-10. Install **dj-database-url** package version 0.5.0 and **psycopg2** in the terminal.
-11. Type *pip3 freeze --local > requirements.txt* to add the packages to the requirements.txt file.
-12. In settings.py file, comment out the default database setting and replace with the DATABASE_URL environment variable.
-13. Run *showmigrations* command in the terminal in order to confirm connection to the external database and view the list of migrations which should have been made, then run the *migrate* command.
-14. Create a superuser for the new database.
-
-### Deploying to Heroku
-
-1. Install gunicorn which will act as our webserver and freeze that into the requirements.txt file
-2. Create a Procfile in the root directory to tell Heroku to create a web dyno which will run gunicorn and serve our Django app.
-3. Temporarily disable collectstatic by logging into the Heroku CLI in the terminal to tell Heroku not to collect static files when deploying:
-4. Add the hostname of our Heroku app to allowed hosts in settings.py.
-5. Commit changes and push to GitHub.
-6. Use the command *git push Heroku main* to deploy to Heroku.
-
-### Stripe
-
-### Amazon Web Services
 
 ## Credits
 [Tim Nelson](https://github.com/TravelTimN/ci-milestone05-fsfw/blob/main/README.md?plain=1) - icons for technologies used in Readme.md
