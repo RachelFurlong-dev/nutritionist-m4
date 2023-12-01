@@ -11,6 +11,7 @@
     * [Lighthouse Report](#lighthouse-report)
     * [Responsive and Browser Testing](#responsive-and=browser-testing)
     * [Testing User Stories](#testing-user-stories)
+    * [Manual Testing](#manual-testing)
     * [Bugs and Error checking](#bugs-and-error-checking)
     * [Solved Bugs](#solved-bugs)
     * [Known Bugs](#known-bugs)
@@ -120,7 +121,27 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
         1. The stockists app lists high street vendors who stock the Nutritionist's products.
         <img src="media/stockists-list.png">
         2. The shop owner/superuser can update the list manually in the admin area to indicate whether a partner has products or is out of stock. Future development would see this functionality to be developed to indicate what products are in stock and eventually into an automated inventory system.
-   
+
+
+### Manual Testing
+| **Activity** | **User Type** | **Aim** | **Activity on site** | **Outcome** | **Evidence**
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| **VIEWING & NAVIGATION & SEARCH** |  |  |  |  |  |
+| 1 | Shopper |View products & find out about the brand | User navigates the site via navbar dropdowns| UUser can access all pages via the dropdowns, the links in the footer and view bag via the basket icon | [desktop](./documentation/#.png), [tablet](./documentation/#.png), [mobile](./documentation/#.png) |
+| 2 | Shopper | Quickly find a specific product without extensive browsing | Shopper can use Price, Rating and Category filters within drop down nav,  'A-Z' or 'Price point' sort options on product page or via the search box within the header section. | Shopper is provided with a variety of ways to find specific products they would like. | [desktop](./documentation/#.png), [tablet](./documentation/#.png), [mobile](./documentation/#.png) |
+| 3 | Shopper | Read & find out about product  | Shopper can select a product to view a product detail page  | Shopper is informed about the product before purchase | [desktop](./documentation/#.png), [tablet](./documentation/#.png), [mobile](./documentation/#.png) |
+| 4 | Shopper | Read & find out about product  | Shopper can select a product to view a product detail page  | Shopper is informed about the product before purchase | [desktop](./documentation/#.png), [tablet](./documentation/#.png), [mobile](./documentation/#.png) |
+| **PRODUCT PURCHASE & CHECKOUT** |  |  |  |  |  |
+| 5 | Shopper |View products & find out about the brand | User navigates the site via navbar dropdowns| UUser can access all pages via the dropdowns, the links in the footer and view bag via the basket icon | [desktop](./documentation/#.png), [tablet](./documentation/#.png), [mobile](./documentation/#.png) |
+| **STORE ADMIN** |  |  |  |  |  |
+| 6 | Owner |View products & find out about the brand | User navigates the site via navbar dropdowns| UUser can access all pages via the dropdowns, the links in the footer and view bag via the basket icon | [desktop](./documentation/#.png), [tablet](./documentation/#.png), [mobile](./documentation/#.png) |
+| **USER PROFILE SETUP** |  |  |  |  |  |
+| 7 | Shopper |Gain inspiration about products and brand | Owner can add blog...| UUser can access all pages via the dropdowns, the links in the footer and view bag via the basket icon | [desktop](./documentation/#.png), [tablet](./documentation/#.png), [mobile](./documentation/#.png) |
+| **NEWSLETTER SIGN UP** |  |  |  |  |  |
+| 8 | Shopper |Provide inspiration about products and brand | Owner can add blog...| UUser can access all pages via the dropdowns, the links in the footer and view bag via the basket icon | [desktop](./documentation/#.png), [tablet](./documentation/#.png), [mobile](./documentation/#.png) |
+| **BLOG FEATURE** |  |  |  |  |  |
+| 9 | Shopper |Provide inspiration about products and brand | Owner can add blog...| UUser can access all pages via the dropdowns, the links in the footer and view bag via the basket icon | [desktop](./documentation/#.png), [tablet](./documentation/#.png), [mobile](./documentation/#.png) |
+
 
 ### Bugs and Error testing
 
