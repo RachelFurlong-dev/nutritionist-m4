@@ -124,19 +124,37 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 
 ### Manual Testing
-| **Activity** | **User Type** | **Aim** | **Activity on site** | **Outcome** | **Evidence**
+| **TEST** | **TEST DETAILS** | **EXPECTED RESULTS** | **ACTUAL RESULTS** | **PASS/FAIL** | **EVIDENCE**
 | :-- | :-- | :-- | :-- | :-- | :-- |
-| **VIEWING & NAVIGATION & SEARCH** |  |  |  |  |  |
-| 1 | Shopper |View products & find out about the brand | User navigates the site via navbar dropdowns| UUser can access all pages via the dropdowns, the links in the footer and view bag via the basket icon | [desktop](./documentation/#.png), [tablet](./documentation/#.png), [mobile](./documentation/#.png) |
-| 2 | Shopper | Quickly find a specific product without extensive browsing | Shopper can use Price, Rating and Category filters within drop down nav,  'A-Z' or 'Price point' sort options on product page or via the search box within the header section. | Shopper is provided with a variety of ways to find specific products they would like. | [desktop](./documentation/#.png), [tablet](./documentation/#.png), [mobile](./documentation/#.png) |
-| 3 | Shopper | Read & find out about product  | Shopper can select a product to view a product detail page  | Shopper is informed about the product before purchase | [desktop](./documentation/#.png), [tablet](./documentation/#.png), [mobile](./documentation/#.png) |
-| 4 | Shopper | Read & find out about product  | Shopper can select a product to view a product detail page  | Shopper is informed about the product before purchase | [desktop](./documentation/#.png), [tablet](./documentation/#.png), [mobile](./documentation/#.png) |
-| **PRODUCT PURCHASE & CHECKOUT** |  |  |  |  |  |
-| 5 | Shopper |View products & find out about the brand | User navigates the site via navbar dropdowns| UUser can access all pages via the dropdowns, the links in the footer and view bag via the basket icon | [desktop](./documentation/#.png), [tablet](./documentation/#.png), [mobile](./documentation/#.png) |
-| **STORE ADMIN** |  |  |  |  |  |
-| 6 | Owner |View products & find out about the brand | User navigates the site via navbar dropdowns| UUser can access all pages via the dropdowns, the links in the footer and view bag via the basket icon | [desktop](./documentation/#.png), [tablet](./documentation/#.png), [mobile](./documentation/#.png) |
-| **USER PROFILE SETUP** |  |  |  |  |  |
-| 7 | Shopper |Gain inspiration about products and brand | Owner can add blog...| UUser can access all pages via the dropdowns, the links in the footer and view bag via the basket icon | [desktop](./documentation/#.png), [tablet](./documentation/#.png), [mobile](./documentation/#.png) |
+| **TOP HEADER LINKS** |  |  |  |  | [desktop](./documentation/#.png), [tablet](./documentation/#.png), [mobile](./documentation/#.png) |
+| 1 | Access URL https://nutritionist-rf-f7d23ec1a841.herokuapp.com/ |Site shows home page including Nav & Search Bar, Account, site content & footer | As Expected | Pass |
+| 2 | Click Nutritionist Logo | Site shows home page | As expected | Pass |
+| 3 | Search bar | Error msg appears if nothing entered in search bar and produt page displays  | As Expected  | Pass |
+| 4 | Search bar - product search | Return correct results whether search term appears in product name or product description  | As Expected  | Pass |
+| 5 | Account login icon | Click account icon shows login/Register dropdown menu | As Expected  | Pass |
+| 6 | Dropdown Register menu item | Dropdown Register menu item  | As Expected  | Pass |
+| 7 | Dropdown Login menu item | Click Login menu item goes to Login page  | As Expected  | Pass |
+| 8 | Bag icon | Click Bag icon takes user to bag page | As Expected  | Pass |
+| **MAIN NAV LINKS** |  |  |  |  | [desktop](./documentation/#.png), [tablet](./documentation/#.png), [mobile](./documentation/#.png) |
+| 9 | Products menu item | Click All Products menu icon shows drop down with price/rating or all products options | As Expected  | Pass |
+| 10 | Dropdown price menu item | Click Price dropdown menu item goes to product sorted by price | As Expected  | Pass |
+| 11 | Dropdown Rating menu icon | Click Rating dropdown menu item goes to product page sorted by rating | As Expected  | Pass |
+| 12 | Dropdown all products shows menu item | Click all products dropdown goes to product page | As Expected  | Pass |
+| 13 | Nuts, seed & mixes menu item  | Click All products menu icon shows drop down with Nuts Seeds, Mixes or all nuts, seeds % mixes options | As Expected  | Pass |
+| 14 | Dropdown nuts menu item | Click Nuts dropdown menu item goes to product page displaying Nuts category | As Expected  | Pass |
+| 15 | Dropdown seeds menu item | Click Seeds dropdown menu item goes to product page displaying Seeds category | As Expected  | Pass |
+| 16 | Dropdown mixes menu item | Click Mixes dropdown menu item goes to product page displaying Mixes category | As Expected  | Pass |
+| 17 | Dropdown all nuts, seeds & mixes menu item | Click Nuts dropdown menu item goes to product page displaying all nuts, seeds & mixes categories | As Expected  | Pass |
+| 18 | Dried Fruit menu item | Click Dried Fruit  menu icon shows drop down withFruits & Berries, Coated fruits, All dried fruit options | As Expected  | Pass |
+| 19 | Dropdown Fruits & Berries menu item  | Click Fruits & Berries dropdown menu item goes to product page displaying Fruits & Beries category | As Expected  | Pass |
+| 20 | Dropdown Coated Fruits menu item  | Click Coated Fruits dropdown menu item goes to product page displaying Coated Fruitss category | As Expected  | Pass |
+| 21 | Dropdown All Dried Fruit menu item   | Click All Dried Fruit menu item dropdown menu item goes to product page displaying All dried fruit categories | As Expected  | Pass |
+| 22 | Blog menu item | Click Blog menu item goes to Blog page | As Expected  | Pass |
+| 8 | Newsletter menu item | Click Newsletter menu item goes to Newsletter page | As Expected  | Pass |
+| **FOOTER LINKS** |  |  |  |  | [desktop](./documentation/#.png), [tablet](./documentation/#.png), [mobile](./documentation/#.png)  |
+| 23 | Stockists button | Click Stockists button goes to Stockists page | As Expected  | Pass |
+| **USER PROFILE SETUP** |  |  |  |  | [desktop](./documentation/#.png), [tablet](./documentation/#.png), [mobile](./documentation/#.png) |
+| 7 | Shopper |Gain inspiration about products and brand | Owner can add blog...| UUser can access all pages via the dropdowns, the links in the footer and view bag via the basket icon |
 | **NEWSLETTER SIGN UP** |  |  |  |  |  |
 | 8 | Shopper |Provide inspiration about products and brand | Owner can add blog...| UUser can access all pages via the dropdowns, the links in the footer and view bag via the basket icon | [desktop](./documentation/#.png), [tablet](./documentation/#.png), [mobile](./documentation/#.png) |
 | **BLOG FEATURE** |  |  |  |  |  |
