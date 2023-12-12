@@ -136,30 +136,57 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 | 7 | Dropdown Login menu item | Click Login menu item goes to Login page  | As Expected  | Pass |
 | 8 | Bag icon | Click Bag icon takes user to bag page | As Expected  | Pass |
 | **MAIN NAV LINKS** |  |  |  |  | [desktop](./documentation/#.png), [tablet](./documentation/#.png), [mobile](./documentation/#.png) |
-| 9 | Products menu item | Click All Products menu icon shows drop down with price/rating or all products options | As Expected  | Pass |
-| 10 | Dropdown price menu item | Click Price dropdown menu item goes to product sorted by price | As Expected  | Pass |
+| 9 | Products menu item | Click All Products menu icon shows drop down with price/rating or All Products options | As Expected  | Pass |
+| 10 | Dropdown Price menu item | Click Price dropdown menu item goes to product sorted by price | As Expected  | Pass |
 | 11 | Dropdown Rating menu icon | Click Rating dropdown menu item goes to product page sorted by rating | As Expected  | Pass |
-| 12 | Dropdown all products shows menu item | Click all products dropdown goes to product page | As Expected  | Pass |
-| 13 | Nuts, seed & mixes menu item  | Click All products menu icon shows drop down with Nuts Seeds, Mixes or all nuts, seeds % mixes options | As Expected  | Pass |
-| 14 | Dropdown nuts menu item | Click Nuts dropdown menu item goes to product page displaying Nuts category | As Expected  | Pass |
-| 15 | Dropdown seeds menu item | Click Seeds dropdown menu item goes to product page displaying Seeds category | As Expected  | Pass |
-| 16 | Dropdown mixes menu item | Click Mixes dropdown menu item goes to product page displaying Mixes category | As Expected  | Pass |
-| 17 | Dropdown all nuts, seeds & mixes menu item | Click Nuts dropdown menu item goes to product page displaying all nuts, seeds & mixes categories | As Expected  | Pass |
-| 18 | Dried Fruit menu item | Click Dried Fruit  menu icon shows drop down withFruits & Berries, Coated fruits, All dried fruit options | As Expected  | Pass |
+| 12 | Dropdown All Products shows menu item | Click all products dropdown goes to product page | As Expected  | Pass |
+| 13 | Nuts, Seed & Mixes menu item  | Click All products menu icon shows drop down with Nuts Seeds, Mixes or all Nuts, seeds % mixes options | As Expected  | Pass |
+| 14 | Dropdown Nuts menu item | Click Nuts dropdown menu item goes to product page displaying Nuts category | As Expected  | Pass |
+| 15 | Dropdown Seeds menu item | Click Seeds dropdown menu item goes to product page displaying Seeds category | As Expected  | Pass |
+| 16 | Dropdown Mixes menu item | Click Mixes dropdown menu item goes to product page displaying Mixes category | As Expected  | Pass |
+| 17 | Dropdown all Nuts, Seeds & Mixes menu item | Click Nuts dropdown menu item goes to product page displaying all nuts, seeds & mixes categories | As Expected  | Pass |
+| 18 | Dried Fruit menu item | Click Dried Fruit  menu icon shows drop down withFruits & Berries, Coated Fruits, All Dried Fruit options | As Expected  | Pass |
 | 19 | Dropdown Fruits & Berries menu item  | Click Fruits & Berries dropdown menu item goes to product page displaying Fruits & Beries category | As Expected  | Pass |
-| 20 | Dropdown Coated Fruits menu item  | Click Coated Fruits dropdown menu item goes to product page displaying Coated Fruitss category | As Expected  | Pass |
+| 20 | Dropdown Coated Fruits menu item  | Click Coated Fruits dropdown menu item goes to product page displaying Coated Fruits category | As Expected  | Pass |
 | 21 | Dropdown All Dried Fruit menu item   | Click All Dried Fruit menu item dropdown menu item goes to product page displaying All dried fruit categories | As Expected  | Pass |
 | 22 | Blog menu item | Click Blog menu item goes to Blog page | As Expected  | Pass |
-| 8 | Newsletter menu item | Click Newsletter menu item goes to Newsletter page | As Expected  | Pass |
+| 23 | Read more button | Click on Blog List Read More button goes to individual blog post | As Expected  | Pass |
+| 24 | Return to Blog button | Click Return to Blog button goes to Blog List page | As Expected  | Pass |
 | **FOOTER LINKS** |  |  |  |  | [desktop](./documentation/#.png), [tablet](./documentation/#.png), [mobile](./documentation/#.png)  |
-| 23 | Stockists button | Click Stockists button goes to Stockists page | As Expected  | Pass |
-| **USER PROFILE SETUP** |  |  |  |  | [desktop](./documentation/#.png), [tablet](./documentation/#.png), [mobile](./documentation/#.png) |
-| 7 | Shopper |Gain inspiration about products and brand | Owner can add blog...| UUser can access all pages via the dropdowns, the links in the footer and view bag via the basket icon |
+| 25 | Stockists button | Click Stockists button goes to Stockists page | As Expected  | Pass |
 | **NEWSLETTER SIGN UP** |  |  |  |  |  |
-| 8 | Shopper |Provide inspiration about products and brand | Owner can add blog...| UUser can access all pages via the dropdowns, the links in the footer and view bag via the basket icon | [desktop](./documentation/#.png), [tablet](./documentation/#.png), [mobile](./documentation/#.png) |
-| **BLOG FEATURE** |  |  |  |  |  |
-| 9 | Shopper |Provide inspiration about products and brand | Owner can add blog...| UUser can access all pages via the dropdowns, the links in the footer and view bag via the basket icon | [desktop](./documentation/#.png), [tablet](./documentation/#.png), [mobile](./documentation/#.png) |
-
+| ?? | Sign-up button | Error message appears if nothing entered in input fields | As Expected  | Pass |
+| ?? | Submit button | Success message appears if input fields completed | As Expected  | Pass |
+| ?? | Submitted Record stored | Subscription appears in admin subscribe section (Name, Email and Date fields) | As Expected  | Pass |
+| **USER PROFILE SETUP** |  |  |  |  | [desktop](./documentation/#.png), [tablet](./documentation/#.png), [mobile](./documentation/#.png) |
+| 26 | Sign-up button | Error message appears if nothing entered in input fields or incorrect data | As Expected  | Pass |
+| 27 | Sign-up button |  Alert appears showing email sent to email address for verification | As Expected  | Pass |
+| 28 | Login button |  New unverified users receive alert | As Expected  | Pass |
+| 29 | New users receive email to inbox |  Message appears in inbox - click message returns user to site with confirmation Toast message evident | As Expected  | Pass |
+| 30 | New users receive email to inbox |  Message appears in inbox - click message returns user to site with confirmation Toast message evident | Says example.com in message | Check Error |
+| 31 | Logged in Admin users can access product management page |  Click dropdown menu item - Product management evident | As Expected  | Pass |
+| 31 | Logged in Admin users can access product management page |  Click dropdown menu item - Product management evident | As Expected  | Pass |
+| 32 | Non-admin users cannot access product management page |  Click dropdown menu item - Product management  not evident | As Expected  | Pass |
+| 33 | Admin users can add a product  in product management |  Product is added when fields completed - if no image url added, then default no-image png file displayed | As Expected  | Pass |
+| 34 | CRUD functionality product management - add |  When all fields filled product can be added - of url missing, then default image is used. Product appears on Product page | As Expected  | Pass |
+| 35 | CRUD functionality product management - edit |  Click edit link and fields can be successfully updated  | As Expected  | Pass |
+| 36 | CRUD functionality product management - delete |  Click delete button and toast confirmation of product deletion appears. - redirect to Products page  | As Expected  | Pass |
+| 37 | Profile page shows previous orders |  Click delete button and toast confirmation of product deletion appears. - redirect to Products page  | As Expected  | Pass |
+| 38 | Profile page saves payment details and address fields |  Form fields are saved when checkbox clicked and after aditional logins | As Expected | Pass |
+| 39 | Log out of account as admin and as ordinary user |  Click logout in dropdown under acoount icon goes to logout page | As Expected | Pass |
+| 40 | Sign-out page |  Cancel link takes user to home page whilst logged in, sign out button takes user to homepage & signed out with asuccess message evident | As Expected | Pass |
+| **BAG OPTIONS** |  |  |  |  | [desktop](./documentation/#.png), [tablet](./documentation/#.png), [mobile](./documentation/#.png) |
+| 41 | Bag page displays prices |  Individual prices, Bag total, Grand Total listed accurately | As Expected | Pass |
+| 42 | Bag page displays message if total under free delivery rate |  Message evident with indicated additional spend required for free delivery | As Expected | Pass |
+| 43 | Bag page displays quantity of products required |  Message evident with indicated additional spend required for free delivery | As Expected | Pass |
+| 44 | Bag page has adjustable quantity options |  Users can increase or decrease product quantities - but not zero or minus quantities | As Expected | Pass |
+| 45 | Bag page has adjustable quantity options |  Users can increase or decrease product quantities - but not zero or minus quantities | As Expected | Pass |
+| 46 | Bag page allows product removal |  Users can remove a product from the bag | As Expected | Pass |
+| 47 | Bag page shows product options |  Product options displayed on relevant products | As Expected | Pass |
+| 48 | Secure checkout button |  Secure checkout button goes to checkout page | As Expected | Pass |
+| 49 | Keep shopping button |  Keep shopping button goes to products page | As Expected | Pass |
+| **CHECKOUT & PAYMENT** |  |  |  |  | [desktop](./documentation/#.png), [tablet](./documentation/#.png), [mobile](./documentation/#.png) |
+| 49 | Keep shopping button |  Keep shopping button goes to products page | As Expected | Pass |
 
 ### Bugs and Error testing
 
