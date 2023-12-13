@@ -13,8 +13,9 @@ class Post(models.Model):
     slug = models.SlugField(max_length=50)
     body = models.TextField(blank=False, null=False)
     publish_date = models.DateTimeField(auto_now_add=True)
-    thumb = models.ImageField(null=True, blank=True) 
-    author = models.ForeignKey(User, on_delete=models.CASCADE, blank=False, null=False)
+    thumb = models.ImageField(null=True, blank=True)
+    author = models.ForeignKey(
+            User, on_delete=models.CASCADE, blank=False, null=False)
     status = models.IntegerField(choices=STATUS, default=0)
 
     class Meta:
@@ -25,5 +26,5 @@ class Post(models.Model):
 
     def save(self, *args, **kwargs):
         if not self.slug:
-            self.slug= self.title.replace(" ", "-")
+            self.slug = self.title.replace(" ", "-")
         super().save(*args, **kwargs)
