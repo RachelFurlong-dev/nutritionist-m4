@@ -16,3 +16,4 @@ def reviews(request, product_id):
         'product': product,
     }
     return render(request, template, context)
+
