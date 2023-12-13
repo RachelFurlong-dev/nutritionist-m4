@@ -185,14 +185,16 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 | 47 | Bag page shows product options |  Product options displayed on relevant products | As Expected | Pass |
 | 48 | Secure checkout button |  Secure checkout button goes to checkout page | As Expected | Pass |
 | 49 | Keep shopping button |  Keep shopping button goes to products page | As Expected | Pass |
+| 50 | View bag page without products added |  Keep shopping button goes to products page | As Expected | Pass |
 | **CHECKOUT & PAYMENT** |  |  |  |  | [desktop](./documentation/#.png), [tablet](./documentation/#.png), [mobile](./documentation/#.png) |
-| 49 | Keep shopping button |  Keep shopping button goes to products page | As Expected | Pass |
-
-### Bugs and Error testing
-
--   A large amount of testing was done to ensure that all pages were linking correctly.
--   Friends and family members were asked to review the site and documentation to point out any bugs and/or user experience issues.
-
+| 51 | Customer detail form fields cannot be empty when ordering |  Popup appears reminding user that form fields must be filled before submitting order | As Expected | Pass |
+| 52 | Adjust bag link works|  User is taken to bag page | As Expected | Pass |
+| 53 | Warning appears if card expired|  Alert appears indicating expiry date is in the past and order cannot be submitted | As Expected | Pass |
+| 54 | Successful online payment prompts feedback to user|  Toast alerts usert that payment has been successful and provides order number | As Expected | Pass |
+| 55 | Completed order can be viewed in profile section|  Order information is listed on Checkout Success page and information provided to user that a confirmation email has been sent to their email account | As Expected | Pass |
+| 56 | Confirmation email works correctly| Confirmation email has been received and contains correct information | As Expected | Pass |
+| 57 | Order history is correct| The order can be seen in Order History on user profile page | As Expected | Pass |
+| 58 | Test link to order detail on Profile Page| Link takes user to order detail on Order History page in User Profile | As Expected | Pass |
 
 ### Solved Bugs
 - I had two paths for the Subscribe App. The path in the Subscribe app urls.py should have been empty rather entered as 'subscribe' , the result being two paths to the Nutritionist urls.py file and one of them could not be identified by Django causing an error.
@@ -202,7 +204,6 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 <img src="media/error-subscribe.png">
 
 ### Known Bugs
+- When a user signs up for a newsletter and already has placed items in the bag - the Success message correctly states a successful signup but appears with contents of bag in the modal - user experience would be improved if the success message didn't include bag products. 
 
--   sorting products
-
-- When a user signs up for a newsltter and already has items already in the basket - the apperance of the success message appears as if it is part of the products modal.
+- Manual testing revealed that users registering a new profile receive an incorrectly formatted email. This will be ammended in Google account settings.
