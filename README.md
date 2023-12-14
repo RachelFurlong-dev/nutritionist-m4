@@ -97,7 +97,7 @@ As illustrated in the ERD, each model corresponds to a database table, and each 
 Django includes an Object-Relational Mapping (ORM) system for working with databases. In Django, a "model" refers to a Python class that defines the structure and behaviour of a database table. Models can establish relationships with other models, such as ForeignKey, OneToOneField, and ManyToManyField, to represent associations between tables in the database.
 
 ### Custom Models
-The following are the custom built models for this app:
+The following are the custom built models for this app. Each App has been commented to explain the functionality:
 
 #### Blog:
 The blog has functionality to add a series of posts with title, text excerpt and an image displayed on the main blog page, with a button to click through to read the whole content of the post.
@@ -255,16 +255,18 @@ Unregistered and registered users can sign up to be added to The Nutritionist ma
 
 - Tutorial by [Python Lessons](https://www.youtube.com/watch?v=wl4Yxo5_Cgw) for help with newsletter sign up development.
 
+- Code Institute Boutique Ado tutorial code used as a basis for project except for custom app development (Blog, Newsletter, Stockists & Reviews).
+
 ### Content
 
 -   All content was written by the developer.
 
 ### Media
 
--   All product images were created by the developer
+-   All product images were created by the developer.
 
 ### Acknowledgements
 
 -   My Mentor Tim Nelson for continuous helpful feedback.
 
--   Martin at Code Institute Tutor Support for help with coding errors..
+-   Martin at Code Institute Tutor Support for help with coding errors.

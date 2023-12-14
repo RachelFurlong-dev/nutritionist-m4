@@ -127,7 +127,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 | **TEST** | **TEST DETAILS** | **EXPECTED RESULTS** | **ACTUAL RESULTS** | **PASS/FAIL** | **EVIDENCE**
 | :-- | :-- | :-- | :-- | :-- | :-- |
 | **TOP HEADER LINKS** |  |  |  |  | [desktop](./media/documentation/top-header-desktop.png), [tablet](./media/documentation/top-header-tablet.png), [mobile](./media/documentation/top-header-mobile.png) |
-| 1 | Access URL https://nutritionist-rf-f7d23ec1a841.herokuapp.com/ |Site shows home page including Nav & Search Bar, Account, site content & footer | As Expected | Pass |
+| 1 | Access URL: https://nutritionist-rf-f7d23ec1a841.herokuapp.com/ |Site shows home page including Nav & Search Bar, Account, site content & footer | As Expected | Pass |
 | 2 | Click Nutritionist Logo | Site shows home page | As expected | Pass |
 | 3 | Search bar | Error msg appears if nothing entered in search bar and produt page displays  | As Expected  | Pass |
 | 4 | Search bar - product search | Return correct results whether search term appears in product name or product description  | As Expected  | Pass |
@@ -154,7 +154,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 | 23 | Read more button | Click on Blog List Read More button goes to individual blog post | As Expected  | Pass |
 | 24 | Return to Blog button | Click Return to Blog button goes to Blog List page | As Expected  | Pass |
 | **FOOTER LINKS** |  |  |  |  | [desktop](./media/documentation/footer-desktop.png), [tablet](./media/documentation/footer-tablet.png), [mobile](./media/documentation/footer-mobile.png)  |
-| 25 | Stockists button | Click Stockists button goes to Stockists page | As Expected  | Pass |
+| 25 | Stockists button | Click Stockists button goes to Stockists page | As Expected  | Pass (NB Links to T&C/Privacy policy pages are a future feature) |
 | **NEWSLETTER SIGN UP** |  |  |  |  | [desktop](./media/documentation/newsletter-desktop.png), [tablet](./media/documentation/newsletter-tablet.png), [mobile](./media/documentation/newsletter-mobile.png) |
 | ?? | Sign-up button | Error message appears if nothing entered in input fields | As Expected  | Pass |
 | ?? | Submit button | Success message appears if input fields completed | As Expected  | Pass |
@@ -176,8 +176,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 | 38 | Profile page saves payment details and address fields |  Form fields are saved when checkbox clicked and after aditional logins | As Expected | Pass |
 | 39 | Log out of account as admin and as ordinary user |  Click logout in dropdown under acoount icon goes to logout page | As Expected | Pass |
 | 40 | Sign-out page |  Cancel link takes user to home page whilst logged in, sign out button takes user to homepage & signed out with asuccess message evident | As Expected | Pass |
-| **BAG OPTIONS** |  |  |  |  | [desktop](./media/documentation/bag-desktop.png), [tablet](,
-./media/documentation/bag-tablet.png), [mobile](./media/documentation/bag-mobile.png) |
+| **BAG OPTIONS** |  |  |  |  | [desktop](./media/documentation/bag-desktop.png), [tablet](./media/documentation/bag-tablet.png), [mobile](./media/documentation/bag-mobile.png) |
 | 41 | Bag page displays prices |  Individual prices, Bag total, Grand Total listed accurately | As Expected | Pass |
 | 42 | Bag page displays message if total under free delivery rate |  Message evident with indicated additional spend required for free delivery | As Expected | Pass |
 | 43 | Bag page displays quantity of products required |  Message evident with indicated additional spend required for free delivery | As Expected | Pass |
