@@ -20,23 +20,22 @@
 
 ### HTML Validation
 
-The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
+The W3C Markup Validator was used to validate some of the tutorial templates similar to the Boutique Ado project. There was a warning to suggests that the type attribute specified in the script tag was unnecessary for JavaScript resources on some of the pages.
+I tested all custom templates - the blog templates, the subscribe template and the stockists template. They all had no errors, except for the stockists template. I updated a closing tag missing and checked for others although the validator did not recognise my updates to the file. I checked using direct input instead and the only errors were related to the Django syntax and not the html. 
 
--   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://github.com/)
--   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://github.com/)
+-   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](/media/validation/html-validation/)
 
 ### CSS Validation
 
-The W3C CSS Validator was used to validate every page of the project to ensure there were no syntax errors in the project.
+The W3C CSS Validator was used to validate the base.css file which showed no errors.
 
 -   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](/media/validation/css-validation.png)
 
 ### JavaScript Validation
 
-The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
+The JSHint validation service was used to used to validate JavaScript used for Stripe functionality in the project. There were 2 warnings related to the ES6 version of JavaScript
 
--   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://github.com/)
--   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://github.com/)
+-   [JSHint Validator](https://jshint.com/) - [Results](/media/validation/js-validation-stripe.png)
 
 ### Python Validation
 
