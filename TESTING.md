@@ -204,6 +204,8 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 <img src="media/error-subscribe.png">
 
+- Email authentication suddenly stopped working after a few weeks for new users registering an account on the site. I checked using Django error page which indicated it was a Google issue. I had to add a new password for access to email authentication via the Django app as Google had deleted the previous one.
+
 ### Known Bugs
 - When a user signs up for a newsletter and already has placed items in the bag - the Success message correctly states a successful signup but appears with contents of bag in the modal - user experience would be improved if the success message didn't include bag products. 
 
