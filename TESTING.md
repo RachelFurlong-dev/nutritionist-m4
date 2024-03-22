@@ -27,10 +27,9 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 ### CSS Validation
 
-The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
+The W3C CSS Validator was used to validate every page of the project to ensure there were no syntax errors in the project.
 
--   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://github.com/)
--   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://github.com/)
+-   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](/media/validation/css-validation.png)
 
 ### JavaScript Validation
 
@@ -41,10 +40,9 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 ### Python Validation
 
-The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
+The Code Institute Python Linter was used to validate every page of the project to ensure there were no syntax errors in the project. I amended any errors for example: syntax and line breaks - the remaining errors are related to lines of code being too long in some files. However, I wanted to preserve clarity and readability of the code, so I left the code as it is.
 
--   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://github.com/)
--   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://github.com/)
+-   [CI Python Linter ](https://pep8ci.herokuapp.com/) - [Results](/media/validation/py-validation/)
 
 ### Lighthouse Report
 

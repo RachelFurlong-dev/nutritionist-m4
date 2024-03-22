@@ -28,7 +28,7 @@
       <div class="card">
         <div class="card-body">
           <p>Subscribe now and embark on a journey towards a happier, healthier you with Nutritionist!</p>
-          <form method="POST" action="{% url 'subscribe' %}" id="">
+          <form method="POST" action="{% url 'subscribe' %}">
               {% csrf_token %}
               {{ subscribe_form|crispy }}
             <button class="btn btn-dark text-uppercase" type="submit">

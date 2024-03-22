@@ -27,7 +27,7 @@
                 </a>
                 {% endif %}
                 <div class="card-body">
-                    <p class="card-text">{{ post.body|linebreaks }}</p>
+                    <div class="card-text">{{ post.body|linebreaks }}</div>
                     <p class=" text-muted">{{ post.author }} | {{ post.publish_date }}</p>
                     <a href="{% url 'post_list' %}" class="btn btn-black text-uppercase">Return to blog</a>
                 </div>
