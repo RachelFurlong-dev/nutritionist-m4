@@ -1,6 +1,7 @@
 from django import forms
 from .models import Subscriber
 
+
 class SubscribeForm(forms.ModelForm):
     class Meta:
         model = Subscriber
@@ -9,7 +10,7 @@ class SubscribeForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         """Add placeholders, classes, autofocus, and ARIA attributes."""
         super().__init__(*args, **kwargs)
-        
+
         # Placeholders
         placeholders = {
             'name': 'Name',
@@ -20,7 +21,7 @@ class SubscribeForm(forms.ModelForm):
         self.fields['name'].widget.attrs['autofocus'] = True
         self.fields['name'].widget.attrs['aria-label'] = 'Name'
         self.fields['email'].widget.attrs['aria-label'] = 'Email'
-        
+
         # Placeholder, class, and label adjustments
         for field in self.fields:
             if self.fields[field].required:
