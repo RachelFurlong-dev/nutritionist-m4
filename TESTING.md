@@ -9,7 +9,7 @@
     * [JavaScript Validation](#javascript-validation)
     * [Python Validation](#python-validation)
     * [Lighthouse Report](#lighthouse-report)
-    * [Responsive and Browser Testing](#responsive-and=browser-testing)
+    * [Responsive and Browser Testing](#responsive-and-browser-testing)
     * [Transactional Email](#transactional-email)
     * [Testing User Stories](#testing-user-stories)
     * [Manual Testing](#manual-testing)
