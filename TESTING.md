@@ -10,6 +10,7 @@
     * [Python Validation](#python-validation)
     * [Lighthouse Report](#lighthouse-report)
     * [Responsive and Browser Testing](#responsive-and=browser-testing)
+    * [Transactional Email](#transactional-email)
     * [Testing User Stories](#testing-user-stories)
     * [Manual Testing](#manual-testing)
     * [Bugs and Error checking](#bugs-and-error-checking)
@@ -45,10 +46,22 @@ The Code Institute Python Linter was used to validate every page of the project 
 
 ### Lighthouse Report
 
+I used Lighthouse to audit the site to evaluate performance, accessibility, SEO and best practices - accessibility scores were slightly reduced due to heading elements not in a sequentially-descending order, and buttons could have a more accessible name for screen readers, which would be a consideration for future template development.
+
+- <img src="media/lighthouse-mobile.png">
+- <img src="media/lighthouse-desktop.png">
+
 ### Responsive and Browser Testing
 
--   The Website was tested on Google Chrome, Internet Explorer, Microsoft Edge and Safari browsers.
--   The website was viewed on a variety of devices such as Desktop, Laptop, iPhone7, iPhone 8 & iPhoneX.
+As well as validating all html, css, js & python files, I have checked compatibilities across a selection of browsers and devices.
+
+- <img src="media/browser-test.png">
+
+### Transactional Email
+
+I tested to make sure users receive an email at registration to verify their account and also an email containing their order details following purchase.
+
+- <img src="media/transactional_email.png">
 
 ### Testing User Stories
 
